@@ -53,9 +53,15 @@
   z-index: -1;
   max-height: 500px;
   max-width: 500px;
-  opacity: 0.6;
-  transform: translate(5px, 5px) scale(5.8);
-  animation: spin3d 8s linear 5s infinite;
+  opacity: 0.5;
+}
+
+.rot90 {
+  animation: rot90 2s linear 1 forwards;
+}
+
+.rot360 {
+  animation: rot360 2s linear 1 forwards;
 }
 
 /* animations */
@@ -74,7 +80,7 @@
     opacity: 0;
   }
   to {
-    opacity: 0.6;
+    opacity: 0.5;
   }
 }
 
@@ -82,6 +88,24 @@
 @keyframes spin3d {
   from {
     transform: translate(5px, 5px) scale(5.8) rotate3d(0, 1, 0, 0deg);
+  }
+  to {
+    transform: translate(5px, 5px) scale(5.8) rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+@keyframes rot90 {
+  from {
+    transform: translate(5px, 5px) scale(5.8) rotate3d(0, 1, 0, 0deg);
+  }
+  to {
+    transform: translate(5px, 5px) scale(5.8) rotate3d(0, 1, 0, 90deg);
+  }
+}
+
+@keyframes rot360 {
+  from {
+    transform: translate(5px, 5px) scale(5.8) rotate3d(0, 1, 0, 270deg);
   }
   to {
     transform: translate(5px, 5px) scale(5.8) rotate3d(0, 1, 0, 360deg);

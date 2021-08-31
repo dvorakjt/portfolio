@@ -1,0 +1,26 @@
+.folder button {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  font-size: 18px;
+}
+
+.folder ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.folder li {
+  padding-left: 40px;
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+.folder button {
+  background-color: none;
+  color: inherit;
+  border: none;
+  margin: 0;
+  padding: 0;
+}

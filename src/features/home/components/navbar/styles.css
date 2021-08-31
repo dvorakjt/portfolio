@@ -28,14 +28,8 @@ nav li {
   padding: 12px;
 }
 
-nav li:hover {
-  background-color: #3297fd;
-  color: white;
-}
-
 /* default opacity for A is 0, keyframes fade-in changes this to 1 and fills forward */
 nav a {
-  font-family: "Space Mono", monospace;
   font-size: 24px;
   text-decoration: none;
   opacity: 0;
@@ -97,11 +91,6 @@ nav li:hover a {
     align-items: center;
     padding-right: 6px;
     padding-top: 2px;
-  }
-
-  #hamburger:hover {
-    background-color: #3297fd;
-    color: white;
   }
 
   /* when toggled open, display the li's and change their padding */

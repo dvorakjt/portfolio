@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import { ColorModeContext } from "../../../../services/colormode/colormode.context";
 import { AnimationContext } from "../../../../services/animation/animation.context";
 import { typeMe } from "./typeme";
 import styles from "./styles.module.css";
@@ -12,7 +13,8 @@ const textArray = [
 
 //functional component to export
 export const Text = () => {
-  const { animationStage, setAnimationStage } = useContext(AnimationContext);
+  const { colorMode } = useContext(ColorModeContext);
+  const { setAnimationStage } = useContext(AnimationContext);
 
   const [isMounted, setIsMounted] = useState(false);
   const [textState, setTextState] = useState([
@@ -41,21 +43,33 @@ export const Text = () => {
     <div className={styles.textWrapper}>
       <h1
         className={`${styles.heading} ${
-          textState[0].currentLine ? styles.blinkingCursor : ""
+          colorMode === "light" ? "lightModeText" : "darkModeText"
+        } ${
+          textState[0].currentLine
+            ? styles[`blinkingCursor${colorMode === "light" ? "LM" : "DM"}`]
+            : ""
         }`}
       >
         {textState[0].text}
       </h1>
       <h2
         className={`${styles.subHeading} ${
-          textState[1].currentLine ? styles.blinkingCursor : ""
+          colorMode === "light" ? "lightModeText" : "darkModeText"
+        } ${
+          textState[1].currentLine
+            ? styles[`blinkingCursor${colorMode === "light" ? "LM" : "DM"}`]
+            : ""
         }`}
       >
         {textState[1].text}
       </h2>
       <h2
         className={`${styles.subHeading} ${
-          textState[2].currentLine ? styles.blinkingCursor : ""
+          colorMode === "light" ? "lightModeText" : "darkModeText"
+        } ${
+          textState[2].currentLine
+            ? styles[`blinkingCursor${colorMode === "light" ? "LM" : "DM"}`]
+            : ""
         }`}
       >
         {textState[2].text}

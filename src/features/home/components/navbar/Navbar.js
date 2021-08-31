@@ -22,7 +22,11 @@ export const Navbar = ({ links, hide }) => {
           return (
             <li
               key={`${link.text}-${index}`}
-              className={`${colorMode === "light" ? "lightMode" : "darkMode"}`}
+              className={`${
+                colorMode === "light"
+                  ? "lightMode lightModeHighlight"
+                  : "darkMode darkModeHighlight"
+              }`}
             >
               <a
                 href={link.url}
@@ -44,7 +48,11 @@ export const Navbar = ({ links, hide }) => {
         onClick={() => setToggle(!toggle)}
         aria-expanded={toggle}
         aria-label={`${toggle ? "Close" : "Open"} Mobile Navigation Menu`}
-        className={`${colorMode === "light" ? "lightMode" : "darkMode"}`}
+        className={`${
+          colorMode === "light"
+            ? "lightMode lightModeHighlight"
+            : "darkMode darkModeHighlight"
+        }`}
       >
         <FontAwesomeIcon icon={faBars} size="2x" />
       </button>

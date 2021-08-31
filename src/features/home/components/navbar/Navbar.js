@@ -1,29 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { ColorModeContext } from "../../../../services/colormode/colormode.context";
 import "./styles.css";
 
 export const Navbar = ({ links, hide }) => {
+  const { colorMode } = useContext(ColorModeContext);
   const [toggle, setToggle] = useState(false);
-
-  console.log(toggle);
 
   return (
     <nav
       role="navigation"
       aria-label="Main Menu"
       style={{ display: hide ? "none" : "flex" }}
-      className={toggle ? "responsive" : ""}
+      className={`${colorMode === "light" ? "lightMode" : "darkMode"} ${
+        toggle ? "responsive" : ""
+      }`}
     >
       <ul>
         {links.map((link, index) => {
           return (
-            <li key={`${link.text}-${index}`}>
+            <li
+              key={`${link.text}-${index}`}
+              className={`${colorMode === "light" ? "lightMode" : "darkMode"}`}
+            >
               <a
                 href={link.url}
                 style={{
                   animation: `fade-in 1s ease-out ${index * 0.1}s 1 forwards`,
                 }}
+                className={`${
+                  colorMode === "light" ? "lightMode" : "darkMode"
+                }`}
               >
                 {link.text}
               </a>
@@ -36,6 +44,7 @@ export const Navbar = ({ links, hide }) => {
         onClick={() => setToggle(!toggle)}
         aria-expanded={toggle}
         aria-label={`${toggle ? "Close" : "Open"} Mobile Navigation Menu`}
+        className={`${colorMode === "light" ? "lightMode" : "darkMode"}`}
       >
         <FontAwesomeIcon icon={faBars} size="2x" />
       </button>

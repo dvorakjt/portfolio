@@ -12,7 +12,6 @@ nav {
   padding: 4px;
   display: flex;
   justify-content: center;
-  background-color: white;
 }
 
 /* UL is centered with no bullet points and spaces content evenly */
@@ -26,7 +25,6 @@ nav ul {
 }
 
 nav li {
-  background-color: white;
   padding: 12px;
 }
 
@@ -37,7 +35,6 @@ nav li:hover {
 
 /* default opacity for A is 0, keyframes fade-in changes this to 1 and fills forward */
 nav a {
-  color: black;
   font-family: "Space Mono", monospace;
   font-size: 24px;
   text-decoration: none;
@@ -47,6 +44,7 @@ nav a {
 /* links inherit the color from their parent li when it is hovered over */
 nav li:hover a {
   color: inherit;
+  background-color: inherit;
 }
 
 /* the hamburger button should be hidden by default */
@@ -90,7 +88,6 @@ nav li:hover a {
     position: absolute;
     right: 0px;
     top: 0;
-    background: white;
     border: none;
     border-radius: 0;
     height: 56px;
@@ -104,6 +101,7 @@ nav li:hover a {
 
   #hamburger:hover {
     background-color: #3297fd;
+    color: white;
   }
 
   /* when toggled open, display the li's and change their padding */

@@ -1,0 +1,130 @@
+/* Import Space Mono font */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+
+/* Navbar goes at the top, is as wide as the screen, centers content and has a white bg */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: none;
+  width: 100%;
+  height: 60px;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+/* UL is centered with no bullet points and spaces content evenly */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  flex: 0.6;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav li {
+  background-color: white;
+  padding: 12px;
+}
+
+nav li:hover {
+  background-color: #3297fd;
+  color: white;
+}
+
+/* default opacity for A is 0, keyframes fade-in changes this to 1 and fills forward */
+nav a {
+  color: black;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  text-decoration: none;
+  opacity: 0;
+}
+
+/* links inherit the color from their parent li when it is hovered over */
+nav li:hover a {
+  color: inherit;
+}
+
+/* the hamburger button should be hidden by default */
+#hamburger {
+  display: none;
+}
+
+/* make navbar responsive */
+
+/* On medium sized screens, widen the UL */
+@media screen and (max-width: 962px) {
+  nav ul {
+    flex: 1;
+  }
+}
+
+/* On small screens, create a hamburger-style menu */
+@media screen and (max-width: 600px) {
+  nav {
+    height: 56px;
+    padding: 0px;
+  }
+
+  nav ul {
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  /* hide the list items and links if not open */
+  nav li {
+    display: none;
+  }
+
+  nav a {
+    display: none;
+  }
+
+  /* position and style the hamburger button */
+  #hamburger {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    background: white;
+    border: none;
+    border-radius: 0;
+    height: 56px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 6px;
+    padding-top: 2px;
+  }
+
+  #hamburger:hover {
+    background-color: #3297fd;
+  }
+
+  /* when toggled open, display the li's and change their padding */
+  .responsive li {
+    display: initial;
+    padding: 10px;
+    margin-left: -4px;
+  }
+
+  /* also display the links */
+  .responsive a {
+    display: initial;
+  }
+}
+
+/* animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

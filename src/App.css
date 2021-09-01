@@ -1,5 +1,6 @@
 /* Import Space Mono font */
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+
 * {
   font-family: "Space Mono", monospace;
 }

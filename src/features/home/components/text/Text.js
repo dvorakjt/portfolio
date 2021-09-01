@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { ColorModeContext } from "../../../../services/colormode/colormode.context";
 import { AnimationContext } from "../../../../services/animation/animation.context";
-import { typeMe } from "./typeme";
+import { typeMe } from "../../../../utils/typeme";
 import styles from "./styles.module.css";
 
 // array containing text to type

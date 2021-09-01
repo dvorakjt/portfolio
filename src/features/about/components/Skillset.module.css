@@ -1,0 +1,18 @@
+.wrapper {
+  text-align: center;
+  max-height: 400px;
+  overflow: auto;
+}
+
+.fadeIn {
+  animation: fade-in 3s ease 1 forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

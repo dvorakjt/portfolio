@@ -3,6 +3,7 @@ import { AnimationContextProvider } from "./services/animation/animation.context
 import { ColorModeContextProvider } from "./services/colormode/colormode.context";
 import { HomeScreen } from "./features/home/screens/HomeScreen";
 import { AboutScreen } from "./features/about/screens/AboutScreen";
+import { ColorToggler } from "./components/ColorToggler";
 import "./App.css";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <AnimationContextProvider>
         <HomeScreen />
         <AboutScreen />
+        <ColorToggler />
       </AnimationContextProvider>
     </ColorModeContextProvider>
   );

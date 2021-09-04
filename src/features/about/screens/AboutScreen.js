@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { ColorModeContext } from "../../../services/colormode/colormode.context";
 import { AnimationContext } from "../../../services/animation/animation.context";
-import { Skillset } from "../components/Skillset";
+import { Skillset } from "../components/skillset/Skillset";
 import { Bio } from "../components/Bio";
 import { ScreenToggler } from "../components/ScreenToggler";
 import styles from "./About.module.css";
@@ -13,6 +13,7 @@ export const AboutScreen = () => {
 
   return animationStage > 2 ? (
     <section
+      id="about"
       className={`${styles.screenContainer} ${
         colorMode === "light" ? "lightMode" : "darkMode"
       }`}
@@ -33,10 +34,7 @@ export const AboutScreen = () => {
           colorMode === "light" ? styles.jumboWrapperLM : styles.jumboWrapperDM
         }`}
       ></div>
-      <ScreenToggler
-        style={{ position: "absolute", bottom: "10px", left: "10px" }}
-        setParentState={setPageToShow}
-      />
+      <ScreenToggler setParentState={setPageToShow} />
     </section>
   ) : null;
 };

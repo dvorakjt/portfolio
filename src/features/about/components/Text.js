@@ -29,7 +29,9 @@ export const Text = ({ textArray }) => {
 
   return (
     <h1
-      className={`${colorMode === "light" ? "lightModeText" : "darkModeText"} ${
+      className={`${styles.typedText} ${
+        colorMode === "light" ? "lightModeText" : "darkModeText"
+      } ${
         textState[0].currentLine
           ? styles[`blinkingCursor${colorMode === "light" ? "LM" : "DM"}`]
           : ""

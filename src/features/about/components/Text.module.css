@@ -1,3 +1,6 @@
+.typedText {
+  text-align: right;
+}
 .blinkingCursorLM {
   border-right: 2px solid black;
   animation: blink-cursor-lm 0.75s step-end infinite;

@@ -45,8 +45,8 @@ export const Skillset = () => {
         source={cssIcon}
         style={{
           position: "absolute",
-          top: "25vh",
-          right: "25vw",
+          bottom: "-5vh",
+          right: "20vw",
           animationDelay: "3s",
         }}
         size="20vw"
@@ -55,7 +55,7 @@ export const Skillset = () => {
         source={jsIcon}
         style={{
           position: "absolute",
-          bottom: "0vh",
+          top: "20vh",
           right: "0vw",
           animationDelay: "3.25s",
         }}
@@ -67,11 +67,25 @@ export const Skillset = () => {
           Some things I'm passionate about are...
         </h3>
         <ul className={styles.fadeInDelay}>
-          <li>HTML, JavaScript and CSS</li>
-          <li>Responsive, cross-browser-compatible front end design</li>
-          <li>React and React Native</li>
           <li>
-            Backend development with Express.js, MySql, MongoDB and Firebase
+            <span className={styles.underlinedText}>
+              HTML, JavaScript and CSS
+            </span>
+          </li>
+          <li>
+            <span className={styles.underlinedText}>
+              Responsive, cross-browser-compatible frontend design
+            </span>
+          </li>
+          <li>
+            <span className={styles.underlinedText}>
+              React and React Native
+            </span>
+          </li>
+          <li>
+            <span className={styles.underlinedText}>
+              Backend development with Node.js, MySql, and MongoDb
+            </span>
           </li>
         </ul>
       </div>

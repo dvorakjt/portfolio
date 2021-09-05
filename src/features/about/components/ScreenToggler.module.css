@@ -13,6 +13,11 @@
   padding: 0;
   background-color: transparent;
   font-family: "ZCOOL KuaiLe", cursive;
+  transition: font-size 0.5s ease;
+}
+
+.toggler button:hover {
+  cursor: pointer;
 }
 
 .toggler button:not(.selected) {

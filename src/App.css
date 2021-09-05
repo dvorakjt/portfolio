@@ -3,6 +3,8 @@
 
 * {
   font-family: "Space Mono", monospace;
+  -ms-overflow-style: none; /*hide scrollbar in IE and edge*/
+  scrollbar-width: none; /*hide scrollbar in firefox */
 }
 
 /* global classes */
@@ -53,22 +55,7 @@
   color: #121212;
 }
 
-/* width */
+/* hide scrollbar in chrome */
 ::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  display: none;
 }

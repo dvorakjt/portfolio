@@ -29,6 +29,7 @@ export const Navbar = ({ links, hide }) => {
               }`}
             >
               <a
+                onClick={() => setToggle(false)}
                 href={link.url}
                 style={{
                   animation: `fade-in 1s ease-out ${index * 0.1}s 1 forwards`,

@@ -9,7 +9,7 @@ import styles from "./About.module.css";
 export const AboutScreen = () => {
   const { animationStage } = useContext(AnimationContext);
   const { colorMode } = useContext(ColorModeContext);
-  const [pageToShow, setPageToShow] = useState("skillset");
+  const [pageToShow, setPageToShow] = useState("bio");
 
   return animationStage > 2 ? (
     <section

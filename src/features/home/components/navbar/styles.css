@@ -24,12 +24,14 @@ nav ul {
   justify-content: space-evenly;
 }
 
-nav li {
+/* nav li {
   padding: 12px;
-}
+} */
 
 /* default opacity for A is 0, keyframes fade-in changes this to 1 and fills forward */
 nav a {
+  display: inline-block;
+  padding: 12px;
   font-size: 24px;
   text-decoration: none;
   opacity: 0;
@@ -93,16 +95,21 @@ nav li:hover a {
     padding-top: 2px;
   }
 
+  #hamburger:hover {
+    cursor: pointer;
+  }
+
   /* when toggled open, display the li's and change their padding */
   .responsive li {
     display: initial;
-    padding: 10px;
     margin-left: -4px;
   }
 
   /* also display the links */
   .responsive a {
-    display: initial;
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
   }
 }
 

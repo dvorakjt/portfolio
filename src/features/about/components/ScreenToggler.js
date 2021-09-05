@@ -4,7 +4,7 @@ import styles from "./ScreenToggler.module.css";
 
 export const ScreenToggler = ({ setParentState }) => {
   const { colorMode } = useContext(ColorModeContext);
-  const [choice, setChoice] = useState(0);
+  const [choice, setChoice] = useState(1);
 
   return (
     <div className={styles.toggler}>

@@ -12,6 +12,7 @@ nav {
   padding: 4px;
   display: flex;
   justify-content: center;
+  z-index: 999;
 }
 
 /* UL is centered with no bullet points and spaces content evenly */

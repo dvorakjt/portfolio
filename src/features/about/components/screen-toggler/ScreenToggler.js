@@ -1,9 +1,12 @@
 import React, { useState, useContext } from "react";
-import { ColorModeContext } from "../../../services/colormode/colormode.context";
+import { ColorModeContext } from "../../../../services/colormode/colormode.context";
 import styles from "./ScreenToggler.module.css";
 
 export const ScreenToggler = ({ setParentState }) => {
+  // import colorMode context so that the component knows which palette to render
   const { colorMode } = useContext(ColorModeContext);
+
+  //choice determines which option is enlarged
   const [choice, setChoice] = useState(1);
 
   return (

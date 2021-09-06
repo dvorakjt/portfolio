@@ -3,7 +3,6 @@
   left: 0;
   top: 28px;
   height: calc(100% - 28px);
-  min-height: fit-content;
   width: 100%;
   overflow: hidden;
   display: flex;

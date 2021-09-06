@@ -16,8 +16,8 @@ const links = [
     url: "#about",
   },
   {
-    text: "Portfolio",
-    url: "#",
+    text: "Projects",
+    url: "#projects",
   },
   {
     text: "Connect",

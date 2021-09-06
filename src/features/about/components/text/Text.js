@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
-import { ColorModeContext } from "../../../services/colormode/colormode.context";
-import { typeMe } from "../../../utils/typeme";
+import { ColorModeContext } from "../../../../services/colormode/colormode.context";
+import { typeMe } from "../../../../utils/typeme";
 import styles from "./Text.module.css";
 
 //to pass into typeMe without updating animation context

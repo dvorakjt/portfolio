@@ -18,14 +18,14 @@ export const ProjectInfoCard = ({ project }) => {
         {" "}
         <h6>README.md</h6>
         <hr />
-        <a href={project.github}>
+        <a href={project.github} target="_blank" rel="noopener noreferrer">
           <img
             src={githubIcon}
             alt={`View ${project.name} on Github`}
             className={styles.githubIcon}
           />
         </a>
-        <ReactMarkdown>{project.readMe}</ReactMarkdown>
+        <ReactMarkdown linkTarget="_blank">{project.readMe}</ReactMarkdown>
       </div>
       <div
         className={`${styles.partialCard} ${

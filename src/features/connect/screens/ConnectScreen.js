@@ -24,21 +24,33 @@ export const ConnectScreen = () => {
           <a href="mailto:dvorakjt@gmail.com">
             <img src={gmailIcon} alt="email me" className={styles.icon} />
           </a>
-          <a href="https://github.com/dvorakjt">
+          <a
+            href="https://github.com/dvorakjt"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src={githubIcon}
               alt="visit my github page"
               className={styles.icon}
             />
           </a>
-          <a href="https://www.linkedin.com/in/joseph-dvorak-musician-educator-developer/">
+          <a
+            href="https://www.linkedin.com/in/joseph-dvorak-musician-educator-developer/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src={linkedInIcon}
               alt="visit my linkedIn page"
               className={styles.icon}
             />
           </a>
-          <a href="https://www.codewars.com/users/dvorakjt">
+          <a
+            href="https://www.codewars.com/users/dvorakjt"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src={codewarsIcon}
               alt="visit my codewars page"
@@ -51,21 +63,47 @@ export const ConnectScreen = () => {
           <ul>
             <li>
               HTML, CSS, LinkedIn icons by{" "}
-              <a href="https://www.iconfinder.com/zlaten">Pixel Bazaar</a> under
-              CC.
+              <a
+                href="https://www.iconfinder.com/zlaten"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Pixel Bazaar
+              </a>{" "}
+              under CC.
             </li>
             <li>
               Github, Javascript, Node.js icon by{" "}
-              <a href="https://www.iconfinder.com/Flatart">Flatart</a> under CC.
+              <a
+                href="https://www.iconfinder.com/Flatart"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Flatart
+              </a>{" "}
+              under CC.
             </li>
             <li>
               Codewars icon by{" "}
-              <a href="https://www.iconfinder.com/iconfinder">Iconfinder</a>{" "}
+              <a
+                href="https://www.iconfinder.com/iconfinder"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Iconfinder
+              </a>{" "}
               under CC.
             </li>
             <li>
               Code icon by{" "}
-              <a href="https://www.iconfinder.com/justui">Just UI</a>.
+              <a
+                href="https://www.iconfinder.com/justui"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Just UI
+              </a>
+              .
             </li>
           </ul>
         </div>

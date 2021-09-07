@@ -16,8 +16,8 @@ const projects = [
   {
     image: portScreen,
     name: "Portfolio",
-    link: "https://dvorakjt.github.io/",
-    github: "https://github.com/dvorakjt/portfolio.com",
+    link: "",
+    github: "https://github.com/dvorakjt/portfolio",
     shortDesc: "My React-powered portfolio",
     readMe: MARKDOWN[0],
   },

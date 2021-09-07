@@ -4,6 +4,7 @@ import { ColorModeContext } from "../../../../services/colormode/colormode.conte
 import githubIcon from "../../../../assets/images/github-icon.png";
 import styles from "./ProjectInfoCard.module.css";
 
+//info card that displays markdown for each project
 export const ProjectInfoCard = ({ project }) => {
   const { colorMode } = useContext(ColorModeContext);
 

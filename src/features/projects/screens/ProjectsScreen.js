@@ -11,6 +11,7 @@ import ntunScreen from "../../../assets/images/ntunation-screenshot.png";
 import mealsScreen from "../../../assets/images/meals-to-go-screenshot.png";
 import focusScreen from "../../../assets/images/focustime-screenshot.png";
 
+// Array of projects to display
 const projects = [
   {
     image: portScreen,
@@ -50,11 +51,15 @@ export const ProjectsScreen = () => {
   const { animationStage } = useContext(AnimationContext);
   const { colorMode } = useContext(ColorModeContext);
   const jumboWrapper = useRef(null);
+
+  /*the angle to rotate the jumbo text by. this is calculated using the inverse tangent of 15% of the
+  window height divided by the window width (or the height and width of the jumbo wrapper, if it exists in the dom*/
   const [angle, setAngle] = useState(
     `${Math.atan((window.innerHeight * 0.15) / window.innerWidth)}rad`
   );
   const [currentProject, setCurrentProject] = useState(0);
 
+  //attach an event listener to the window so that when the screen is resized, the angle of the jumbo text changes
   useEffect(() => {
     const updateAngle = () => {
       if (jumboWrapper.current) {
@@ -67,6 +72,7 @@ export const ProjectsScreen = () => {
     window.addEventListener("resize", updateAngle);
   }, [setAngle]);
 
+  //if the opening animation hasn't finished, display nothing
   return animationStage > 2 ? (
     <section
       id="projects"

@@ -1,6 +1,6 @@
 .screenContainer {
   position: absolute;
-  top: calc(300vh - 1px);
+  top: 300vh;
   left: 0;
   overflow: hidden;
   width: 100%;
@@ -33,7 +33,9 @@
   width: 100%;
   position: absolute;
   top: calc(300vh + 150px);
+  left: 0;
   z-index: 1000;
+  overflow: hidden;
 }
 
 .attribList {
@@ -58,16 +60,19 @@
 tall, so adjust the positioning of the projects screen accordingly */
 @media screen and (max-height: 650px) {
   .screenContainer {
-    top: calc(100vh + 1299px);
+    top: calc(100vh + 1300px);
   }
   .footer {
-    top: calc(100vh + 1449px);
+    top: calc(100vh + 1450px);
   }
 }
 
 /* if the screen height is 650px or less, the about screen will be 650px
 tall, so adjust the positioning of the projects screen accordingly */
 @media screen and (max-width: 600px) {
+  .attribList {
+    margin-left: -8%;
+  }
   .attribList li {
     font-size: 9px;
   }

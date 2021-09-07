@@ -10,6 +10,7 @@ import portScreen from "../../../assets/images/portfolio-screenshot.png";
 import ntunScreen from "../../../assets/images/ntunation-screenshot.png";
 import mealsScreen from "../../../assets/images/meals-to-go-screenshot.png";
 import focusScreen from "../../../assets/images/focustime-screenshot.png";
+import githubIcon from "../../../assets/images/github-icon.png";
 
 // Array of projects to display
 const projects = [
@@ -63,6 +64,7 @@ export const ProjectsScreen = () => {
   useEffect(() => {
     const updateAngle = () => {
       if (jumboWrapper.current) {
+        console.log(window.innerWidth);
         const a = jumboWrapper.current.offsetHeight;
         const b = jumboWrapper.current.offsetWidth;
         const alpha = Math.atan(a / b);
@@ -107,7 +109,23 @@ export const ProjectsScreen = () => {
         </h1>
       </div>
       <ProjectsNavbar projects={projects} setParentState={setCurrentProject} />
-      <ProjectViewport source={projects[currentProject].image} />
+      <a
+        href={projects[currentProject].github}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src={githubIcon}
+          alt={`View ${projects[currentProject].name} on Github`}
+          className={styles.githubIcon}
+        />
+      </a>
+      <div className={styles.spacer}></div>
+      <h2>{projects[currentProject].name}</h2>
+      <ProjectViewport
+        source={projects[currentProject].image}
+        href={projects[currentProject].link || "no link"}
+      />
       <ProjectInfoCard project={projects[currentProject]} />
     </section>
   ) : null;

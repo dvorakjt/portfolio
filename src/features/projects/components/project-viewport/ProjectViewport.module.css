@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap");
+
 .outerContainer {
   position: absolute;
   bottom: 5px;
@@ -20,6 +22,9 @@
   background-position: center;
   height: 500px;
   width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .borderLM {
@@ -30,18 +35,28 @@
   border-color: white;
 }
 
-@media screen and (max-width: 768px) {
+.outerContainer a {
+  color: inherit;
+}
+
+@media screen and (max-width: 1150px) {
   .outerContainer {
+    position: initial;
+    align-self: center;
+    justify-self: center;
     height: 450px;
     width: 450px;
   }
   .innerContainer {
+    position: initial;
+    align-self: center;
+    justify-self: center;
     height: 430px;
     width: 430px;
   }
 }
 
-@media screen and (max-height: 768px) {
+@media screen and (max-width: 768px) {
   .outerContainer {
     height: 360px;
     width: 360px;

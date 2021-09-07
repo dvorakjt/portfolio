@@ -33,7 +33,8 @@
 
 @media screen and (max-width: 600px) {
   .projectsNav {
-    top: 28%;
+    top: 25%;
+    left: 0;
     height: 75px;
     width: 100%;
   }

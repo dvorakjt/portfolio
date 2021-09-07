@@ -2,10 +2,10 @@
   /* position container 1 screen down from the top of the page */
   position: absolute;
   left: 0;
-  top: 195vh;
+  top: calc(200vh - 1px);
 
   /* set the screen height to take up the entire viewport, or 650px at min */
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   min-height: 650px;
 
@@ -80,7 +80,7 @@
 tall, so adjust the positioning of the projects screen accordingly */
 @media screen and (max-height: 650px) {
   .screenContainer {
-    top: calc(100vh + 650px);
+    top: calc(100vh + 649px);
   }
 }
 

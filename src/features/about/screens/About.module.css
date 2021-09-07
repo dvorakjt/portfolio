@@ -5,7 +5,7 @@
   left: 0;
 
   /* set the screen height to take up the entire viewport, or 650px at min */
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   min-height: 650px;
 

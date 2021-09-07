@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import htmlIcon from "../../../../assets/images/html-icon.png";
 import { ProjectIcon } from "../project-icon/ProjectIcon";
 import styles from "./ProjectsNavbar.module.css";
 
-export const ProjectsNavbar = ({ projects }) => {
+export const ProjectsNavbar = ({ projects, setParentState }) => {
   //default to the middle item in the array being selected
-  const [selected, setSelected] = useState(Math.floor(projects.length / 2));
+  const [selected, setSelected] = useState(0);
 
   return (
     <div className={styles.projectsNav}>
@@ -20,7 +19,10 @@ export const ProjectsNavbar = ({ projects }) => {
             >
               <ProjectIcon
                 source={project.image}
-                onClickFunc={() => setSelected(index)}
+                onClickFunc={() => {
+                  setSelected(index);
+                  setParentState(index);
+                }}
               />
             </li>
           );

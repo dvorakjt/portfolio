@@ -69,3 +69,9 @@
   height: 15%;
   clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
 }
+
+@media screen and (max-width: 480px) {
+  .jumboText {
+    font-size: 60px;
+  }
+}

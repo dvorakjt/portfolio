@@ -1,0 +1,53 @@
+.outerContainer {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  border-radius: 50%;
+  border: dashed 10px;
+  height: 520px;
+  width: 520px;
+}
+
+.innerContainer {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  border-radius: 50%;
+  border: solid 10px;
+  border-color: inherit;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  height: 500px;
+  width: 500px;
+}
+
+.borderLM {
+  border-color: #121212;
+}
+
+.borderDM {
+  border-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .outerContainer {
+    height: 450px;
+    width: 450px;
+  }
+  .innerContainer {
+    height: 430px;
+    width: 430px;
+  }
+}
+
+@media screen and (max-height: 768px) {
+  .outerContainer {
+    height: 360px;
+    width: 360px;
+  }
+  .innerContainer {
+    height: 340px;
+    width: 340px;
+  }
+}

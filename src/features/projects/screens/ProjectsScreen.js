@@ -2,29 +2,47 @@ import React, { useContext, useRef, useEffect, useState } from "react";
 import { AnimationContext } from "../../../services/animation/animation.context";
 import { ColorModeContext } from "../../../services/colormode/colormode.context";
 import { ProjectsNavbar } from "../components/projects-navbar/ProjectsNavbar";
+import { ProjectViewport } from "../components/project-viewport/ProjectViewport";
+import { ProjectInfoCard } from "../components/project-info-card/ProjectInfoCard";
+import { MARKDOWN } from "../../../assets/markdown";
 import styles from "./ProjectsScreen.module.css";
 import portScreen from "../../../assets/images/portfolio-screenshot.png";
+import ntunScreen from "../../../assets/images/ntunation-screenshot.png";
+import mealsScreen from "../../../assets/images/meals-to-go-screenshot.png";
+import focusScreen from "../../../assets/images/focustime-screenshot.png";
 
 const projects = [
   {
     image: portScreen,
-    name: "some project",
+    name: "Portfolio",
+    link: "https://dvorakjt.github.io/",
+    github: "https://github.com/dvorakjt/portfolio.com",
+    shortDesc: "My React-powered portfolio",
+    readMe: MARKDOWN[0],
   },
   {
-    image: portScreen,
-    name: "some project",
+    image: ntunScreen,
+    name: "Ntunation",
+    link: "http://ntunation.com",
+    github: "https://github.com/dvorakjt/ntunation",
+    shortDesc: "An ear-training app focused on small pitch discrepenancies",
+    readMe: MARKDOWN[1],
   },
   {
-    image: portScreen,
-    name: "some project",
+    image: mealsScreen,
+    name: "Meals to Go",
+    github: "https://github.com/dvorakjt/MealsToGo",
+    shortDesc: "A React Native restaurant app built through the ZTM course",
+    readMe: MARKDOWN[2],
   },
   {
-    image: portScreen,
-    name: "some project",
-  },
-  {
-    image: portScreen,
-    name: "some project",
+    image: focusScreen,
+    name: "FocusTime",
+    link: "https://snack.expo.dev/@dvorakjt/focustime",
+    github: "https://github.com/dvorakjt/FocusTime",
+    shortDesc:
+      "A React Native productivity app bootstrapped with Expo, built through the ZTM course",
+    readMe: MARKDOWN[3],
   },
 ];
 
@@ -35,13 +53,16 @@ export const ProjectsScreen = () => {
   const [angle, setAngle] = useState(
     `${Math.atan((window.innerHeight * 0.15) / window.innerWidth)}rad`
   );
+  const [currentProject, setCurrentProject] = useState(0);
 
   useEffect(() => {
     const updateAngle = () => {
-      const a = jumboWrapper.current.offsetHeight;
-      const b = jumboWrapper.current.offsetWidth;
-      const alpha = Math.atan(a / b);
-      setAngle(`${alpha}rad`);
+      if (jumboWrapper.current) {
+        const a = jumboWrapper.current.offsetHeight;
+        const b = jumboWrapper.current.offsetWidth;
+        const alpha = Math.atan(a / b);
+        setAngle(`${alpha}rad`);
+      }
     };
     window.addEventListener("resize", updateAngle);
   }, [setAngle]);
@@ -79,7 +100,9 @@ export const ProjectsScreen = () => {
           Projects
         </h1>
       </div>
-      <ProjectsNavbar projects={projects} />
+      <ProjectsNavbar projects={projects} setParentState={setCurrentProject} />
+      <ProjectViewport source={projects[currentProject].image} />
+      <ProjectInfoCard project={projects[currentProject]} />
     </section>
   ) : null;
 };

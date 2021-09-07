@@ -1,3 +1,4 @@
+export const PORTFOLIO = `
 # Portfolio
 A React-powered portfolio showcasing my favorite projects.
 ## Concept
@@ -21,4 +22,4 @@ Smooth scrolling is applied to the entire page, and CSS transitions and animatio
 - React Markdown
 - Icons thanks to Iconfinder.com
 
-> README written with [StackEdit](https://stackedit.io/).
+> README written with [StackEdit](https://stackedit.io/).`;

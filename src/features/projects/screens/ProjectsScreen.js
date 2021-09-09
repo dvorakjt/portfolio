@@ -17,7 +17,7 @@ const projects = [
   {
     image: portScreen,
     name: "Portfolio",
-    link: "",
+    link: "http://dvorakdevelops.herokuapp.com",
     github: "https://github.com/dvorakjt/portfolio",
     shortDesc: "My React-powered portfolio",
     readMe: MARKDOWN[0],
@@ -33,6 +33,7 @@ const projects = [
   {
     image: mealsScreen,
     name: "Meals to Go",
+    link: "https://appetize.io/app/xcgyhuzkgfbqhjan708x2htw9m?device=pixel4&language=en",
     github: "https://github.com/dvorakjt/MealsToGo",
     shortDesc: "A React Native restaurant app built through the ZTM course",
     readMe: MARKDOWN[2],
@@ -64,7 +65,6 @@ export const ProjectsScreen = () => {
   useEffect(() => {
     const updateAngle = () => {
       if (jumboWrapper.current) {
-        console.log(window.innerWidth);
         const a = jumboWrapper.current.offsetHeight;
         const b = jumboWrapper.current.offsetWidth;
         const alpha = Math.atan(a / b);

@@ -33,7 +33,7 @@ const projects = [
   {
     image: mealsScreen,
     name: "Meals to Go",
-    link: "https://appetize.io/app/xcgyhuzkgfbqhjan708x2htw9m?device=pixel4&language=en",
+    link: "https://appetize.io/app/xn92uv6mchkc4d7hgnhpfe3910?device=pixel4&language=en",
     github: "https://github.com/dvorakjt/MealsToGo",
     shortDesc: "A React Native restaurant app built through the ZTM course",
     readMe: MARKDOWN[2],
